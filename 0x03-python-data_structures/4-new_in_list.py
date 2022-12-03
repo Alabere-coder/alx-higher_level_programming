@@ -6,4 +6,4 @@ def new_in_list(my_list, idx, element):
         return new_copy
     else:
         new_copy[idx] = element
-        return 
+        return new_copy 
