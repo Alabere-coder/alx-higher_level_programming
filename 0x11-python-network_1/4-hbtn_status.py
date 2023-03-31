@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-"""Python script that fetches https://intranet.hbtn.io/status."""
-
+"""Check status"""
 import requests
 
-if __name__ == "__main__":
-    content = requests.get("https://intranet.hbtn.io/status").text
+
+def status():
+    """status"""
+    result = requests.get("https://intranet.hbtn.io/status")
+
     print("Body response:")
-    print("\t- type: {}".format(type(content)))
-    print("\t- content: {}".format(content))
+    print("\t- type: {}".format(type(result.text)))
+    print("\t- content: {}".format(result.text))
+
+if __name__ == "__main__":
+    status()
